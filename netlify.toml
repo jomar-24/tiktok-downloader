@@ -1,2 +1,8 @@
 [build]
+  # El directorio donde están tus funciones
   functions = "netlify/functions"
+
+# Esto le dice a Netlify qué versión de Python usar.
+# Es la pista que necesita para buscar y construir tus funciones.
+[functions.runtime]
+  python = "3.11"
