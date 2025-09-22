@@ -1,14 +1,2 @@
-# Configuración de Build
 [build]
-  command = "echo 'Build complete'"
-  publish = "."
   functions = "netlify/functions"
-
-# Configuración de Funciones
-[functions]
-  directory = "netlify/functions"
-
-# --- LA PARTE NUEVA Y MÁS IMPORTANTE ---
-# Esto fuerza a Netlify a usar el entorno de Python 3.11
-[functions.runtime]
-  python = "3.11"
