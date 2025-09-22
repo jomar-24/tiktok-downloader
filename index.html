@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIGHT.CH.G - Descargador de TikTok</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="logo.png" alt="Logo" class="logo-img">
+                </div>
+            </div>
+            <p class="subtitle">Descarga videos de TikTok sin marca de agua</p>
+        </header>
+
+        <main class="main-content">
+            <div class="download-section">
+                <div class="input-container">
+                    <i class="fas fa-link input-icon"></i>
+                    <input 
+                        type="url" 
+                        id="tiktok-url" 
+                        placeholder="Pega aquí la URL del video de TikTok..."
+                        class="url-input"
+                    >
+                    <button id="download-btn" class="download-button">
+                        <i class="fas fa-download"></i>
+                        Descargar
+                    </button>
+                    <button id="refresh-btn" class="refresh-button" style="display:none;">
+                        <i class="fas fa-sync-alt"></i>
+                        ACTUALIZAR
+                    </button>
+                </div>
+
+                <div class="loading" id="loading" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Procesando video...</p>
+                </div>
+
+                <div class="result" id="result" style="display: none;">
+                    <div class="video-info">
+                        <h3 id="video-title">Título del video</h3>
+                        <div class="download-options">
+                            <a href="#" id="download-link" class="download-link" download>
+                                <i class="fas fa-download"></i>
+                                Descargar Video MP4
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="error" id="error" style="display: none;">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <p id="error-message">Ha ocurrido un error</p>
+                </div>
+            </div>
+
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Sin marca de agua</h3>
+                    <p>Descarga videos en alta calidad sin marcas de agua</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Rápido y fácil</h3>
+                    <p>Proceso simple de descarga en pocos segundos</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Compatible</h3>
+                    <p>Funciona en todos los dispositivos y navegadores</p>
+                </div>
+            </div>
+
+            <div class="instructions">
+                <h2>¿Cómo usar?</h2>
+                <div class="steps">
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <p>Copia la URL del video de TikTok</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <p>Pégala en el campo de arriba</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <p>Haz clic en "Descargar" y espera</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">4</span>
+                        <p>¡Descarga tu video sin marca de agua!</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 LIGHT.CH.G - Descargador de TikTok</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

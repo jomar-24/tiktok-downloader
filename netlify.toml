@@ -1,0 +1,12 @@
+[build]
+  # Esta línea no es estrictamente necesaria para archivos estáticos,
+  # pero es bueno tenerla.
+  command = "echo 'No build command needed'"
+  # Netlify publicará los archivos desde la carpeta raíz.
+  publish = "."
+  # Netlify buscará tus funciones de Python aquí.
+  functions = "netlify/functions"
+
+[functions]
+  # Confirma de nuevo el directorio de funciones.
+  directory = "netlify/functions"
