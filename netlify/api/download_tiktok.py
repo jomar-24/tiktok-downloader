@@ -13,15 +13,23 @@ def handler(event, context):
     """
     logger.info("Función 'download_tiktok' iniciada.")
 
+
+    # 0. Verificar método HTTP
+    method = event.get('httpMethod', 'GET')
+    if method != 'POST':
+        return {
+            'statusCode': 405,
+            'body': json.dumps({'error': 'Método no permitido. Usa POST.'}),
+            'headers': {'Allow': 'POST'}
+        }
+
     # 1. Obtener la URL de TikTok del cuerpo de la solicitud
     try:
         body = json.loads(event.get('body', '{}'))
         tiktok_url = body.get('url')
         if not tiktok_url:
             raise ValueError("URL no proporcionada en la solicitud.")
-        
         logger.info(f"URL recibida: {tiktok_url}")
-
     except Exception as e:
         logger.error(f"Error al parsear la solicitud: {str(e)}")
         return {

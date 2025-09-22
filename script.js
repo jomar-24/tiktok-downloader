@@ -95,14 +95,15 @@ function showLoading() {
     downloadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Procesando...';
 }
 
-// Mostrar resultado exitoso
+// Función para mostrar el resultado (VERSIÓN CORREGIDA)
 function showResult(data) {
     hideAllMessages();
-    
+    // Usamos 'data.title' que sí nos envía el backend
     videoTitle.textContent = data.title || 'Video de TikTok';
-    downloadLink.href = data.download_url;
-    downloadLink.download = data.filename || 'tiktok_video.mp4';
-    
+    // Usamos 'data.video_url' que sí nos envía el backend
+    downloadLink.href = data.video_url;
+    // Creamos un nombre de archivo a partir del título
+    downloadLink.download = data.title ? `${data.title}.mp4` : 'tiktok_video.mp4';
     resultDiv.style.display = 'block';
     resetButton();
 }
