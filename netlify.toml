@@ -1,12 +1,14 @@
+# Configuración de Build
 [build]
-  # Esta línea no es estrictamente necesaria para archivos estáticos,
-  # pero es bueno tenerla.
-  command = "echo 'No build command needed'"
-  # Netlify publicará los archivos desde la carpeta raíz.
+  command = "echo 'Build complete'"
   publish = "."
-  # Netlify buscará tus funciones de Python aquí.
   functions = "netlify/functions"
 
+# Configuración de Funciones
 [functions]
-  # Confirma de nuevo el directorio de funciones.
   directory = "netlify/functions"
+
+# --- LA PARTE NUEVA Y MÁS IMPORTANTE ---
+# Esto fuerza a Netlify a usar el entorno de Python 3.11
+[functions.runtime]
+  python = "3.11"
