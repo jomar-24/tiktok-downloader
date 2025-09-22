@@ -55,7 +55,7 @@ async function handleDownload() {
     
     try {
         // Llamar al backend para procesar el video
-    const response = await fetch('/.netlify/functions/download_tiktok', {
+    const response = await fetch('/.netlify/api/download_tiktok', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
