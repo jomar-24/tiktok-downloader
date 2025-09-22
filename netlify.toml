@@ -1,5 +1,5 @@
 [build]
-  functions = "netlify/api"
+  functions = "netlify/functions"
 
 [functions.runtime]
   python = "3.11"
